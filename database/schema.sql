@@ -214,9 +214,9 @@ CREATE TABLE laporan_penggunaan_lem (
 
 -- Insert Data Master (tanpa ketergantungan)
 INSERT INTO users (username, password_hash, role) VALUES
-('trisni', '$2b$10$8K1p/eJ0Y9Z8nE3kQmHvW.bOWJXr3vZQxGx7LXlTLZJ3Z9Nf0cZfG', 'PPIC'),
-('produksi', '$2b$10$8K1p/eJ0Y9Z8nE3kQmHvW.bOWJXr3vZQxGx7LXlTLZJ3Z9Nf0cZfG', 'PRODUKSI'),
-('bos', '$2b$10$8K1p/eJ0Y9Z8nE3kQmHvW.bOWJXr3vZQxGx7LXlTLZJ3Z9Nf0cZfG', 'BOS');
+('trisni', '$2b$10$HCqiGugy0xf6KtnNyTJI9OCwR6dl4Vq8ogTZ36/oGN5MdhP.iMzDO', 'PPIC'),
+('produksi', '$2b$10$HCqiGugy0xf6KtnNyTJI9OCwR6dl4Vq8ogTZ36/oGN5MdhP.iMzDO', 'PRODUKSI'),
+('bos', '$2b$10$HCqiGugy0xf6KtnNyTJI9OCwR6dl4Vq8ogTZ36/oGN5MdhP.iMzDO', 'BOS');
 
 INSERT INTO gudang (nama, keterangan) VALUES
 ('Gudang A', 'Gudang Bahan Baku Mentah'),

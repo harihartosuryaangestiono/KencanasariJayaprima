@@ -2,27 +2,27 @@ const { Pool } = require('pg');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-const pool = process.env.DATABASE_URL
-  ? new Pool({
+const poolConfig = process.env.DATABASE_URL
+  ? {
       connectionString: process.env.DATABASE_URL,
       ssl: { rejectUnauthorized: false },
-    })
-  : new Pool({
+      max: 1,
+      idleTimeoutMillis: 10000,
+      connectionTimeoutMillis: 10000,
+    }
+  : {
       user: process.env.DB_USER || 'postgres',
       host: process.env.DB_HOST || 'localhost',
       database: process.env.DB_NAME || 'plywood_production',
       password: process.env.DB_PASSWORD || 'password123',
       port: process.env.DB_PORT || 5432,
       ssl: isProduction ? { rejectUnauthorized: false } : false,
-    });
+    };
 
-pool.on('connect', () => {
-  console.log('✅ Connected to PostgreSQL database');
-});
+const pool = new Pool(poolConfig);
 
 pool.on('error', (err) => {
   console.error('❌ Unexpected error on database client', err);
-  process.exit(-1);
 });
 
 module.exports = {

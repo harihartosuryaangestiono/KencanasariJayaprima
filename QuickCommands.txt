@@ -1,0 +1,12 @@
+# Backend
+cd backend
+npm install
+cp .env.example .env
+# Edit .env
+npm run dev
+
+# Frontend (terminal baru)
+cd frontend
+npm install
+cp .env.example .env
+npm run dev

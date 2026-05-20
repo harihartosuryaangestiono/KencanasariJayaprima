@@ -40,17 +40,6 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-// DB Test (temporary debug)
-app.get('/api/db-test', async (req, res) => {
-  const db = require('./src/config/database');
-  try {
-    const result = await db.query('SELECT COUNT(*) FROM users');
-    res.json({ success: true, userCount: result.rows[0].count });
-  } catch (err) {
-    res.status(500).json({ success: false, error: err.message, code: err.code });
-  }
-});
-
 // Error Handler
 app.use((err, req, res, next) => {
   console.error(err.stack);

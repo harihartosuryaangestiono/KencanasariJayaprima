@@ -131,20 +131,6 @@ export default function Login() {
           </button>
         </form>
 
-        <div className="mt-8 pt-6 border-t border-slate-200">
-          <p className="text-xs text-slate-600 text-center mb-4 font-semibold uppercase tracking-wider">Default Credentials</p>
-          <div className="space-y-2 text-xs">
-            <div className="bg-slate-50 rounded-lg p-3 font-mono text-slate-800 border border-slate-200">
-              <span className="font-bold text-primary-600">PPIC:</span> trisni / password123
-            </div>
-            <div className="bg-slate-50 rounded-lg p-3 font-mono text-slate-800 border border-slate-200">
-              <span className="font-bold text-primary-600">PRODUKSI:</span> produksi / password123
-            </div>
-            <div className="bg-slate-50 rounded-lg p-3 font-mono text-slate-800 border border-slate-200">
-              <span className="font-bold text-primary-600">BOS:</span> bos / password123
-            </div>
-          </div>
-        </div>
       </div>
 
       <style>{`
